@@ -22,8 +22,10 @@ devops-demo-api/
     ├── app-service.yaml
     ├── ingress.yaml
     ├── prometheus-configmap.yaml
+    ├── prometheus-pvc.yaml
     ├── prometheus-deployment.yaml
     ├── prometheus-service.yaml
+    ├── grafana-pvc.yaml
     ├── grafana-deployment.yaml
     └── grafana-service.yaml
 ```
