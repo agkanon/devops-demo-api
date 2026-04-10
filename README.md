@@ -77,7 +77,7 @@ curl http://localhost:8080/status
 # Send data
 curl -X POST http://localhost:8080/data \
   -H "Content-Type: application/json" \
-  -d '{"name": "Anamul", "action": "test"}'
+  -d '{"name": "Kanon", "action": "test"}'
 ```  
 
 ### Kubernetes Deployment
@@ -96,7 +96,7 @@ curl http://api.devops-demo.local/status
 # POST - Send Data
 curl -X POST http://api.devops-demo.local/data \
   -H "Content-Type: application/json" \
-  -d '{"name": "Anamul", "action": "test"}'
+  -d '{"name": "Kanon", "action": "test"}'
 ```
 
 ### How the System Can Handle ~100 Requests/Second
