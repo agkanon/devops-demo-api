@@ -86,6 +86,17 @@ kubectl apply -f k8s/
 **Access the API**: `http://api.devops-demo.local`
 (Add `127.0.0.1 api.devops-demo.local` to your `/etc/hosts` file for local testing)
 
+### Testing the API:
+```bash
+# GET - Health Check
+curl http://api.devops-demo.local/status
+
+# POST - Send Data
+curl -X POST http://api.devops-demo.local/data \
+  -H "Content-Type: application/json" \
+  -d '{"name": "Anamul", "action": "test"}'
+```
+
 ### How the System Can Handle ~100 Requests/Second
 The architecture is designed to easily exceed **100 requests per second:**
 ### Performance Highlights
@@ -143,17 +154,6 @@ flowchart TD
     C --> D3
 ```
 ---
-
-### Testing the API:
-```bash
-# GET - Health Check
-curl http://api.devops-demo.local/status
-
-# POST - Send Data
-curl -X POST http://api.devops-demo.local/data \
-  -H "Content-Type: application/json" \
-  -d '{"name": "Anamul", "action": "test"}'
-```
 
 ### Monitoring & Observability
 Custom metrics: Request count, latency, error rate, CPU, memory.
